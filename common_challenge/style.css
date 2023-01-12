@@ -1,0 +1,243 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #d3d3d3;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+nav {
+  width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+#site-search {
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+.join-button {
+  background-color: #3fc0e9;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+}
+.content-wrapper {
+  width: 1200px;
+  height: fit-content;
+}
+
+/*Intro section styling///////////////////////////////*/
+
+#intro-section {
+  width: 100%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.halfway-content {
+  height: 100%;
+  width: 100%;
+}
+
+.left-content {
+  display: flex;
+  justify-content: center;
+}
+
+.left-intro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 25%;
+}
+
+.left-intro-content > h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.right-intro-content > picture > img {
+  margin-top: 10%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ================ How it works section ========================== */
+#how-it-works {
+  margin-top: 10%;
+  height: 40vh;
+}
+
+.wrapper > span > h2 {
+  margin: 0;
+}
+
+.options-wrapper {
+  margin-top: 5vh;
+  width: 100%;
+  height: 20vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.step-btn {
+  background-color: #367cff;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid;
+  padding: 8px 25px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.option1 {
+  height: fit-content;
+  text-align: center;
+  margin-right: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.option1 > p {
+  padding: 0px 20px;
+}
+.option2 > p {
+  padding: 0px 20px;
+}
+.option2 {
+  height: fit-content;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin-left: 10px;
+}
+
+/*Find your app*/
+#find-your-app {
+  height: 50vh;
+  width: 100%;
+}
+
+/*search bar*/
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  /* width: 50px; */
+}
+
+input {
+  font-size: 1rem;
+}
+
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+
+.card {
+  
+  background-color: #fff;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: 10rem;
+  border-radius: 5px;
+  box-shadow: rgb(145 145 145 / 20%) 0px 2px 8px 0px;
+  margin-right: 2rem;
+
+}
+
+.card > header {
+  margin-bottom: 0.25rem;
+}
+
+.card > .body {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.hide {
+  display: none;
+}
+
+/* Image fit in divs*/
+.imageFit {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+/*searchbar code*/
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+input {
+  font-size: 1rem;
+}
+
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: .25rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid black;
+  background-color: white;
+  padding: .5rem;
+}
+
+.card > .header {
+  margin-bottom: .25rem;
+}
+
+.card > .body {
+  font-size: .8rem;
+  color: #777;
+}
+
+.hide {
+  display: none;
+}

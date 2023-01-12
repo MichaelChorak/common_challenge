@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>FAQ</li>
+          <li>About us</li>
+          <li><button class="join-button">Join now</button></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="content-wrapper">
+        <section id="intro-section">
+          <article class="left-content halfway-content">
+            <div class="intro-text">
+              <div class="left-intro-content">
+                <h1>
+                  Got the feeling that you are being followed?
+                  <br />
+                  That may be true.
+                </h1>
+                <p>
+                  Check who's following to succesfully remove them from your
+                  life.
+                </p>
+                <button class="join-button">Get started</button>
+              </div>
+            </div>
+          </article>
+          <article class="right-content halfway-content">
+            <div class="right-intro-content">
+              <picture>
+                <img src="images/intro_image.png" alt="" srcset="" />
+              </picture>
+            </div>
+          </article>
+        </section>
+
+        <section id="how-it-works">
+          <div class="wrapper">
+            <span>
+              <h2>Alright, so this is how it works.</h2>
+              <p>It's pretty easy</p>
+            </span>
+            <div class="options-wrapper">
+              <div class="option1">
+                <button class="step-btn">Step 1</button>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                  porro, quis maiores iste officia ipsum culpa aliquam quasi non
+                  possimus deleniti est repellendus enim vel. Ad corrupti
+                  recusandae dicta sed?
+                </p>
+              </div>
+              <div class="option2">
+                <button class="step-btn">Step 2</button>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                  porro, quis maiores iste officia ipsum culpa aliquam quasi non
+                  possimus deleniti est repellendus enim vel. Ad corrupti
+                  recusandae dicta sed?
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="find-your-app">
+          <div class="search-wrapper">
+            <label for="search">Search application</label>
+            <input type="search" id="search" data-search />
+          </div>
+          <div class="user-cards" data-user-cards-container>
+            <template data-user-template>
+              <div class="card">
+                <div class="header" data-header></div>
+                <div class="body" data-body></div>
+                <img class="imageFit" data-img></img>
+              </div>
+            </template>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
