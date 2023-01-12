@@ -35,6 +35,7 @@ users = apps.map((user) => {
   header.textContent = user.title;
   body.textContent = user.body;
   image.src = user.imgFile;
+  card.setAttribute("id", user.title);
   // moreInfoBtn.textContent = product.title;
   userCardContainer.append(card)
   return { title: user.title, img: user.imgFile, body: user.body, element: card };
