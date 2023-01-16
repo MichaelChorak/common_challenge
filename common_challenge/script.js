@@ -19,7 +19,7 @@ const apps = [
   },
   {
     title: "Facebook",
-    imgFile: "images/intro_image.png",  
+    imgFile: "images/logo_facebook.png",  
     body: "Content text"
   }
 ];
@@ -62,7 +62,7 @@ searchInput.addEventListener("input", (e) => {
 
 const appInformation = [
   {
-    header: "images/intro_image.png",
+    header: "images/logo_facebook.png",
     title: "Facebook",
     body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro, quis maiores iste officia ipsum culpa aliquam quasi non possimus deleniti est repellendus enim vel. Ad corrupti recusandae dicta sed",
     category: [
@@ -111,3 +111,4 @@ appInformation.map(function(app) {
  
 })
 
+/* media querys */

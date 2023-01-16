@@ -10,10 +10,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #d3d3d3;
   position: sticky;
+  z-index: 1;
   top: 0;
   background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 nav {
@@ -27,6 +28,8 @@ ul {
   width: 100%;
   justify-content: space-between;
   padding: 0;
+  margin: 1rem;
+  
 }
 
 ul > li {
@@ -45,16 +48,19 @@ ul > li {
   border: none;
   border-radius: 10px;
   color: #fff;
+  font-weight: bold;
 }
 
 main {
   display: flex;
   justify-content: center;
   height: fit-content;
+  margin: 20px;
 }
 .content-wrapper {
   width: 1200px;
   height: fit-content;
+  position: relative;
 }
 
 /*Intro section styling///////////////////////////////*/
@@ -147,8 +153,8 @@ main {
 
 /*Find your app*/
 #find-your-app {
-  height: 50vh;
   width: 100%;
+  margin-top: 15vh;
 }
 
 /*search bar*/
@@ -240,4 +246,81 @@ input {
 
 .hide {
   display: none;
+}
+
+.imageSize {
+  width: 20%;
+  height: auto;
+}
+
+.appInformationContainer {
+  width: 100%;
+  background-color: #fff;
+  height: 50vh;
+  bordeR: 1px solid;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-cards {
+  background-color: #fefefe;
+  height: 90%;
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/* media querys */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    #intro-section {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+     
+    }
+    .left-intro-content {
+      margin-top: 0;
+    }
+
+    #option1 {
+      margin: 0;
+    }
+
+    #option2 {
+      margin: 0;
+    }
+    #how-it-works {
+      height: 70vh;
+    }
+    .options-wrapper {
+      height: auto;
+    }
+
+    #get-started-button {
+      padding: 10px 10px;
+      width: 100%;
+      border-radius: 20px;
+      font-weight: bold;
+  }
+  .imageFit {
+    width: 25%;
+  }
+  .card {
+    margin: 10px 0 0;
+  }
+
 }
