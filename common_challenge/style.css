@@ -2,7 +2,8 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 header {
@@ -23,7 +24,7 @@ nav {
   justify-content: space-evenly;
 }
 
-ul {
+#nav-ul {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -104,7 +105,7 @@ main {
 /* ================ How it works section ========================== */
 #how-it-works {
   margin-top: 10%;
-  height: 40vh;
+  height: 30vh;
 }
 
 .wrapper > span > h2 {
@@ -135,11 +136,13 @@ main {
   margin-right: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 5px;
 }
 
 .option1 > p {
   padding: 0px 20px;
 }
+
 .option2 > p {
   padding: 0px 20px;
 }
@@ -149,10 +152,12 @@ main {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   margin-left: 10px;
+  border-radius: 5px;
 }
 
 /*Find your app*/
 #find-your-app {
+  position: relative;
   width: 100%;
   margin-top: 15vh;
 }
@@ -187,7 +192,7 @@ input {
   max-height: 10rem;
   border-radius: 5px;
   box-shadow: rgb(145 145 145 / 20%) 0px 2px 8px 0px;
-  margin-right: 2rem;
+  margin-right: 1rem;
 
 }
 
@@ -208,7 +213,7 @@ input {
 .imageFit {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 40%;
 }
 
 /*searchbar code*/
@@ -230,9 +235,10 @@ input {
 }
 
 .card {
-  border: 1px solid black;
-  background-color: white;
+  border: 1px solid #e6e6e6;
+  background-color: #f9f9f9;
   padding: .5rem;
+  gap: 1rem;
 }
 
 .card > .header {
@@ -249,7 +255,7 @@ input {
 }
 
 .imageSize {
-  width: 20%;
+  width: 10%;
   height: auto;
 }
 
@@ -257,13 +263,19 @@ input {
   width: 100%;
   background-color: #fff;
   height: 50vh;
-  bordeR: 1px solid;
+  bordeR: 1px solid #dbdbdb;
   position: absolute;
-  top: 0;
+  top: -50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 3px;
+  display: none;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .app-cards {
@@ -277,6 +289,47 @@ input {
   justify-content: center;
   align-items: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/*Information container hidden/shown */
+.hidden {
+  display: block;
+}
+
+.center-column-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.infoWrapper {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid #f9f9f9; */
+}
+#app-info-titles {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+ 
+}
+#app-info-titles > li{
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+
+#app-info-titles > li > p {
+  margin-left: 0.75rem;
+}
+
+.card:hover {
+  animation-name: hover;
+  animation-duration:0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
 }
 
 /* media querys */
@@ -304,7 +357,7 @@ input {
       margin: 0;
     }
     #how-it-works {
-      height: 70vh;
+      height: 40vh;
     }
     .options-wrapper {
       height: auto;
@@ -319,8 +372,66 @@ input {
   .imageFit {
     width: 25%;
   }
+
   .card {
-    margin: 10px 0 0;
+    padding: .5rem;
+    border: 1px solid #e5e5e5;
+    margin-right: 0;
+    /* display: none; */
+    margin-bottom: 10px;
+
   }
 
+  #nav-ul {
+    margin: 0.75rem 1.5rem;
+}
+
+.appInformationContainer {
+  top: -15%;
+}
+
+
+}
+
+
+
+@keyframes hover {
+  from {
+    transform: translateY(0);
+  } to {
+    transform: translateY(-5px);
+  }
+}
+
+/* --------------------------Appinformationcontainer styling STARTS HERE ------------------------------------*/
+
+#app-logo {
+  padding-bottom: 3vh;
+}
+
+#fig-caption {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+#close-container {
+  position: relative;
+}
+
+.close-btn-container {
+  height: 5vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.close-btn {
+  border: none;
+  background-color: red;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 1px;
 }

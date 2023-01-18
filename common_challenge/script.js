@@ -8,20 +8,20 @@ let users = [];
 
 const apps = [
   {
+    title: "Facebook",
+    imgFile: "images/app-logos/facebook.png", 
+    
+  },
+  {
     title: "Instagram",
-    imgFile: "images/intro_image.png",
-    body: "Content text"
+    imgFile: "images/app-logos/instagram.png"
+    
   },
   {
     title: "Snapchat",
-    imgFile: "images/intro_image.png",  
-    body: "Content text"
-  },
-  {
-    title: "Facebook",
-    imgFile: "images/logo_facebook.png",  
-    body: "Content text"
+    imgFile: "images/app-logos/snapchat.png"
   }
+  
 ];
 
 
@@ -31,21 +31,20 @@ users = apps.map((user, index) => {
   
   const card = userCardTemplate.content.cloneNode(true).children[0];
   const header = card.querySelector("[data-header");
-  const body = card.querySelector("[data-body");
   const image = card.querySelector("[data-img]");
   // const moreInfoBtn = card.querySelector("[data-info]");
   header.textContent = user.title;
-  body.textContent = user.body;
   image.src = user.imgFile;
   card.setAttribute("id", user.title);
+  card.setAttribute("id", user.title);
+  // card.setAttribute("class", "block");
   user.id = index;
   // moreInfoBtn.textContent = product.title;
   userCardContainer.append(card)
   return { title: user.title, img: user.imgFile, body: user.body, id: user.id, element: card };
 })
 
-console.log(users)
-
+console.log(users);
 
 
 searchInput.addEventListener("input", (e) => {
@@ -62,53 +61,46 @@ searchInput.addEventListener("input", (e) => {
 
 const appInformation = [
   {
-    header: "images/logo_facebook.png",
+    header: "images/app-logos/facebook.png",
     title: "Facebook",
-    body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro, quis maiores iste officia ipsum culpa aliquam quasi non possimus deleniti est repellendus enim vel. Ad corrupti recusandae dicta sed",
-    category: [
-      "Risky",
-      "Warning",
-      "Neutral"
-    ]
+    body: "Hello G"
   },
-  // {
-  //   header: "images/intro_image.png",
-  //   body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro, quis maiores iste officia ipsum culpa aliquam quasi non possimus deleniti est repellendus enim vel. Ad corrupti recusandae dicta sed",
-  //   footer: "Footer hier"
-  // },
-  // {
-  //   header: "images/intro_image.png",
-  //   body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro, quis maiores iste officia ipsum culpa aliquam quasi non possimus deleniti est repellendus enim vel. Ad corrupti recusandae dicta sed",
-  //   footer: "Footer hier"
-  // }
+  
 ];
 
 
-
 let appInformationContainer = document.querySelector('.appInformationContainer');
+  appInformation.map(function(app, index) {
 
+  let formTitles = appInformation;
+  let appForm = document.querySelectorAll('#app-form');
+  let appContent = document.querySelectorAll('#form-content');
 
+  let appInfoImage = document.querySelector("#app-logo");
+  let imageFigure = document.querySelector('#image-figure');
+  let figCaption = document.querySelector('#fig-caption');
+  app.id = index;
+  figCaption.textContent = app.title
 
-appInformation.map(function(app) {
-  //creating a container element per app object
-  let div = document.createElement("div");
-  let title = document.createElement("p");
-  let body = document.createElement("p");
-  let image = document.createElement("img");
-  title.textContent = app.title;
-  body.textContent = app.body;
-  image.src = app.header;
-
-  image.classList.add('imageSize');
-  div.classList.add('app-cards');
-  body.classList.add('text-center');
-
-  div.append(image);
-  div.append(title);
-  div.append(body);
-
-  appInformationContainer.append(div);
- 
+  appInfoImage.classList.add('imageSize')
+  imageFigure.classList.add('center-column-flex');
 })
 
-/* media querys */
+
+// appInformationContainer.classList.add('hidden');
+const facebookCard = document.querySelector('#Facebook');
+
+function showAppInfoContainer(){
+  appInformationContainer.classList.toggle('hidden');
+}
+facebookCard.addEventListener('click', showAppInfoContainer);
+
+closeBtn = document.querySelector('.close-btn');
+
+function closeScreen() {
+ if(appInformationContainer.classList.contains("hidden")){
+      appInformationContainer.classList.remove("hidden");
+   }
+}
+
+closeBtn.addEventListener('click', closeScreen);
