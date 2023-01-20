@@ -329,7 +329,7 @@ input {
   animation-duration:0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  animation-direction: alternate;
+  animation-direction: alternate 
 }
 
 /* media querys */
