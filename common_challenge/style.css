@@ -43,13 +43,19 @@ ul > li {
 }
 
 .join-button {
-  background-color: #3fc0e9;
-  padding: 5px 10px;
+  background-color: #ffffff;
+  padding: 7px 10px;
   cursor: pointer;
-  border: none;
-  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  color: rgb(0, 0, 0);
+  transition: 0.3s ease-in-out;
+}
+
+.join-button:hover{
+  background-color: rgb(36, 33, 33);
   color: #fff;
-  font-weight: bold;
+  border: 1px solid #fff;
 }
 
 main {
@@ -182,7 +188,7 @@ input {
 }
 
 .card {
-  
+  cursor: pointer;
   background-color: #fff;
   padding: 0.5rem;
   display: flex;
