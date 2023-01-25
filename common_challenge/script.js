@@ -3,23 +3,46 @@ const userCardContainer = document.querySelector("[data-user-cards-container]");
 const searchInput = document.querySelector("[data-search]");
 const appInformationContainer = document.querySelector('.appInformationContainer');
 
+
 let users = [];
 
 const apps = [
   {
-    title: "Facebook",
     logo: "images/app-logos/facebook.png", 
+    title: "Facebook",
+    body: "this is Facebook",
   },
   {
+    logo: "images/app-logos/instagram.png",
     title: "Instagram",
-    logo: "images/app-logos/instagram.png"
+    body: "This is Instagram"
   },
   {
+    logo: "images/app-logos/snapchat.png",
     title: "Snapchat",
-    logo: "images/app-logos/snapchat.png"
-  }
+    body: "This is Snapchat"
+  },
+  {
+    logo: "images/app-logos/tiktok.png",
+    title: "Tiktok",
+    body: "This is Snapchat"
+  },
+  {
+    logo: "images/app-logos/google.png",
+    title: "Google",
+    body: "This is Snapchat"
+  },
+  {
+    logo: "images/app-logos/netflix.png",
+    title: "Netflix",
+    body: "This is Snapchat"
+  },
+  {
+    logo: "images/app-logos/spotify.png",
+    title: "Spotify",
+    body: "This is Snapchat"
+  },
 ];
-
 
 
 users = apps.map((user, index) => {
@@ -31,11 +54,13 @@ users = apps.map((user, index) => {
   header.textContent = user.title;
   image.src = user.logo;
   card.setAttribute("id", user.title);
-  card.setAttribute("id", user.title);
- 
   userCardContainer.append(card)
-  return { title: user.title, img: user.logo, id: user.id, element: card };
+  return { title: user.title, img: user.logo, body: user.body, id: user.id, element: card };
 })
+
+
+
+
 
 
 searchInput.addEventListener("input", (e) => {
@@ -46,60 +71,20 @@ searchInput.addEventListener("input", (e) => {
   });
 });
 
-
-const appInformation = [
-  {
-    logo: "images/app-logos/facebook.png",
-    title: "Facebook",
-    body: "Hello G",
-  },
-  {
-    logo: "images/app-logos/instagram.png",
-    title: "Instagram",
-    body: "Hello G"
-  },
-  {
-    logo: "images/app-logos/snapchat.png",
-    title: "Snapchat",
-    body: "Hello G"
-  },
-];
-
-let appImage = document.querySelector("#app-logo");
-let imageFigure = document.querySelector('#image-figure');
-let figCaption = document.querySelector('#fig-caption');
-
-appImage.classList.add('imageSize')
-imageFigure.classList.add('center-column-flex');
-
-
-
-let appInfo = [];
 //selecting all app cards
 const appCard = document.querySelectorAll('.card');
+const infoWrapper = document.querySelector('[data-app-information-container]');
 
-
-function showCurrentInformation(){
-
-  for(i = 0; i < appInformation.length; i++)
-    appInformation
-}
 
 //toggles the hidden class to display/hide the card container
 function showAppInfoContainer(){
   appInformationContainer.classList.toggle('hidden');
 }
 
-
-
 //loop through the apps to apply the open and close function to each of them
   for(i = 0; i < appCard.length; i ++){
-
-
-
     appCard[i].addEventListener('click', showAppInfoContainer);
-    appCard[i].addEventListener('click', showCurrentInformation);
-    
+    // appCard[i].addEventListener('click', showTargetData);
   }
 
 // selecting the closing button

@@ -35,14 +35,15 @@
                 <p>
                  Find out who's using what kind of information from you.
                 </p>
-                <button class="join-button" id="get-started-button">Get started</button>
+                <!-- <button class="join-button" id="get-started-button">Get started</button> -->
+                <a href="#find-your-app">Let's begin</a>
               </div>
             </div>
           </article>
           <article class="right-content halfway-content">
             <div class="right-intro-content">
               <picture>
-                <img src="images/intro_image.png" alt="" srcset="" />
+                <img src="images/intro_image.jpg" alt="" srcset="" />
               </picture>
             </div>
           </article>
@@ -81,24 +82,48 @@
               <div class="card">
                 <img class="imageFit" data-img></img>
                 <div class="header" data-header></div>
+                
               </div>
             </template>
           </div>
 
           <section class="appInformationContainer">
-            <article class="infoWrapper">
-              <div id="close-container">
-                <div class="close-btn-container">
-                  <button class="close-btn">X</button>
-                </div>
+            <div id="close-container">
+              <div class="close-btn-container">
+                <button class="close-btn" style="cursor: pointer;">X</button>
               </div>
-              <figure id="image-figure">
-                <img src="" alt="app logo" id="app-logo">
-                <figcaption id="fig-caption"></figcaption>
-              </figure>
-              <ul id="app-info-titles">
-                <li id="app-form"><p id="form-content"></p></li>
-              </ul>
+            </div>
+            <article class="infoWrapper" data-app-information-container>
+              <div class="container">
+                <img src="images/app-logos/facebook.png" alt="" data-info-img>    
+                <p data-info-title>Facebook</p>
+                <div class="data-container">
+                  <p data-info-body>
+                    <ul>
+                      <li>Activiteit en gegevens die je verstrekt:</li>
+                      <ul>
+                        <li>Werkt dit zo?</li>
+                      </ul>
+                      <li>Vrienden, volgers en andere connecties:
+                        <ul>
+                          <li>Werkt dit zo?</li>
+                        </ul>
+                      </li>
+                      <li>Informatie over de app, browser en het apparaat:
+                        <ul>
+                          <li>Werkt dit zo?</li>
+                        </ul>
+                      </li>
+                      <li>Informatie van Partners, leveranciers en derde:
+                        <ul>
+                          <li>Werkt dit zo?</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+
+              </div>
             </article>
           </section>
         </section>
