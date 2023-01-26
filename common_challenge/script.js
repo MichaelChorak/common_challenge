@@ -10,44 +10,37 @@ const apps = [
   {
     logo: "images/app-logos/facebook.png", 
     title: "Facebook",
-    body: "this is Facebook",
-    isSelected: false,
+    body: "Facebook would like to know from you:",
   },
   {
     logo: "images/app-logos/instagram.png",
     title: "Instagram",
-    body: "This is Instagram",
-    isSelected: false,
+    body: "Instagram would like to know from you:",
   },
   {
     logo: "images/app-logos/snapchat.png",
     title: "Snapchat",
-    body: "This is Snapchat",
-    isSelected: false,
+    body: "Snapchat would like to know from you:",
   },
   {
     logo: "images/app-logos/tiktok.png",
     title: "Tiktok",
-    body: "Tiktok",
-    isSelected: false,
+    body: "Tiktok would like to know from you:",
   },
   {
     logo: "images/app-logos/google.png",
     title: "Google",
-    body: "This is Google",
-    isSelected: false,
+    body: "Google would like to know from you:",
   },
   {
     logo: "images/app-logos/netflix.png",
     title: "Netflix",
-    body: "This is Netflix",
-    isSelected: false,
+    body: "Netflix would like to know from you:",
   },
   {
     logo: "images/app-logos/spotify.png",
     title: "Spotify",
-    body: "This is Spotify",
-    isSelected: false,
+    body: "Spotify would like to know from you:",
   },
 ];
 
