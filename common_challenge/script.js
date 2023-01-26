@@ -79,29 +79,18 @@ const appInfo = (e) => {
   let filteredArray = applications.filter(obj1 => apps.some(obj2 => obj2.id === obj1.id));
 
   let id = e.target.textContent;
-  // let img = filteredArray.logo;
 
   for (let i = 0; i < applications.length; i++){
-
-    if(filteredArray.id === applications.id){
       infoTitle.textContent = id;
       infoLogo.src = filteredArray[e.target.id].logo;
       infoBody.textContent = filteredArray[e.target.id].body;
-
-    }
   }
-
-
-
-  console.log(filteredArray);
-  console.log(e.currentTarget);
-
 }
 
 
 searchInput.addEventListener("input", (e) => {
   const value = e.target.value.toLowerCase()
-  users.forEach((user) => {
+  applications.forEach((user) => {
     const isVisible = user.title.toLowerCase().includes(value)
     user.element.classList.toggle("hide", !isVisible);
   });
