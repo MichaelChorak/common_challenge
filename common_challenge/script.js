@@ -4,48 +4,55 @@ const searchInput = document.querySelector("[data-search]");
 const appInformationContainer = document.querySelector('.appInformationContainer');
 
 
-let users = [];
+let applications = [];
 
 const apps = [
   {
     logo: "images/app-logos/facebook.png", 
     title: "Facebook",
     body: "this is Facebook",
+    isSelected: false,
   },
   {
     logo: "images/app-logos/instagram.png",
     title: "Instagram",
-    body: "This is Instagram"
+    body: "This is Instagram",
+    isSelected: false,
   },
   {
     logo: "images/app-logos/snapchat.png",
     title: "Snapchat",
-    body: "This is Snapchat"
+    body: "This is Snapchat",
+    isSelected: false,
   },
   {
     logo: "images/app-logos/tiktok.png",
     title: "Tiktok",
-    body: "This is Snapchat"
+    body: "Tiktok",
+    isSelected: false,
   },
   {
     logo: "images/app-logos/google.png",
     title: "Google",
-    body: "This is Snapchat"
+    body: "This is Google",
+    isSelected: false,
   },
   {
     logo: "images/app-logos/netflix.png",
     title: "Netflix",
-    body: "This is Snapchat"
+    body: "This is Netflix",
+    isSelected: false,
   },
   {
     logo: "images/app-logos/spotify.png",
     title: "Spotify",
-    body: "This is Snapchat"
+    body: "This is Spotify",
+    isSelected: false,
   },
 ];
 
 
-users = apps.map((user, index) => {
+applications = apps.map((user, index) => {
   user.id = index;
   const card = userCardTemplate.content.cloneNode(true).children[0];
   const header = card.querySelector("[data-header");
@@ -53,14 +60,43 @@ users = apps.map((user, index) => {
 
   header.textContent = user.title;
   image.src = user.logo;
-  card.setAttribute("id", user.title);
+  card.setAttribute("id", user.id);
   userCardContainer.append(card)
-  return { title: user.title, img: user.logo, body: user.body, id: user.id, element: card };
+  return { logo: user.logo, title: user.title, body: user.body, id: user.id, element: card };
 })
 
 
+// console.log(applications);
+// console.log(apps);
+
+const appInfo = (e) => {
+
+  let infoTitle = document.querySelector('[data-info-title]')
+  let infoLogo = document.querySelector('[data-info-logo]')
+  let infoBody = document.querySelector('[data-info-body]')
+  const image = document.querySelector("[data-img]");
+
+  let filteredArray = applications.filter(obj1 => apps.some(obj2 => obj2.id === obj1.id));
+
+  let id = e.target.textContent;
+  // let img = filteredArray.logo;
+
+  for (let i = 0; i < applications.length; i++){
+
+    if(filteredArray.id === applications.id){
+      infoTitle.textContent = id;
+      infoLogo.src = filteredArray[e.target.id].logo;
+      infoBody.textContent = filteredArray[e.target.id].body;
+
+    }
+  }
 
 
+
+  console.log(filteredArray);
+  console.log(e.currentTarget);
+
+}
 
 
 searchInput.addEventListener("input", (e) => {
@@ -84,7 +120,7 @@ function showAppInfoContainer(){
 //loop through the apps to apply the open and close function to each of them
   for(i = 0; i < appCard.length; i ++){
     appCard[i].addEventListener('click', showAppInfoContainer);
-    // appCard[i].addEventListener('click', showTargetData);
+    appCard[i].addEventListener('click', appInfo);
   }
 
 // selecting the closing button
